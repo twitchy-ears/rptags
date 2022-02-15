@@ -1,0 +1,34 @@
+{
+	"name": "rptags",
+	"author": [
+		"Twitchy Ears"
+	],
+	"license-name": "AGPL-3.0-or-later",
+	"url": "https://github.com/twitchy-ears/rptags",
+	"descriptionmsg": "rptags-desc",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"MessagesDirs": {
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"rptags::init"
+		],
+		"BeforePageDisplay": [
+		        "rptags::loadstyles"
+		]
+	},
+	"AutoloadClasses": {
+		"rptags": "rptags.php"
+	},
+	"ResourceModules": {
+	  "ext.rptags": {
+	    "localBasePath": "resources/ext.rptags",
+	    "remoteExtPath": "rptags/resources/ext.rptags",
+	    "styles": [ "rptags.css" ]
+	  }
+	},
+	"manifest_version": 2
+}
